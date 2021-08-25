@@ -1,49 +1,67 @@
+import 'package:counter/src/navigation/routes.dart';
+import 'package:counter/src/ui/common_widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-
-    setState(() {
-      _counter++;
-    });
-  }
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('Home Page'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      body: _buildContent(context),
+    );
+  }
+
+  _buildContent(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          const Text(
+            'Routes',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w600,
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          CustomElevatedButton(
+            onPressed: () => Navigator.pushNamed(context, Routes.firstPage),
+            child: const Text(
+              'First Page',
             ),
-          ],
-        ),
+            color: Colors.blue,
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+          CustomElevatedButton(
+            onPressed: () => Navigator.pushNamed(context, Routes.secondPage),
+            child: const Text(
+              'Second Page',
+            ),
+            color: Colors.red,
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+          CustomElevatedButton(
+            onPressed: () => Navigator.pushNamed(context, Routes.thirdPage),
+            child: const Text(
+              'Third Page',
+            ),
+            color: Colors.pink,
+          ),
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

@@ -14,7 +14,7 @@ class Routes {
     switch (routeSettings.name) {
       case homePage:
         return MaterialPageRoute(
-            builder: (context) => const HomePage(title: 'home'));
+            builder: (context) => const HomePage());
       case firstPage:
         return MaterialPageRoute(
             builder: (context) => const FirstPage(title: 'First Page'));
