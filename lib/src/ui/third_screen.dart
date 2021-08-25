@@ -13,16 +13,23 @@ class _ThirdPageState extends State<ThirdPage> {
   int _counter = 0;
 
   void _incrementCounter() {
-
     setState(() {
       _counter++;
     });
+  }
+
+  void _back() {
+    Navigator.pop(context);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: _back,
+        ),
         title: Text(widget.title),
       ),
       body: Center(
