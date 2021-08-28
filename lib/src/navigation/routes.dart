@@ -25,7 +25,7 @@ class Routes {
         return MaterialPageRoute(
             builder: (context) => const ThirdPage(title: 'Third Page'));
       default:
-        throw Exception('Whoops, How did i get here??!?!');
+        throw Exception('This screen doesn\'t exist');
     }
   }
 }

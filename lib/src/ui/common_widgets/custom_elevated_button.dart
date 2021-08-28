@@ -5,8 +5,8 @@ class CustomElevatedButton extends StatelessWidget {
     Key? key,
     required this.child,
     required this.color,
-    this.borderRadius: 3.0,
-    this.height: 30.0,
+    this.borderRadius = 3.0,
+    this.height = 30.0,
     required this.onPressed,
   }) : super(key: key);
 
