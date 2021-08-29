@@ -1,6 +1,7 @@
 import 'package:counter/src/navigation/routes.dart';
 import 'package:counter/src/ui/common_widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: Text(AppLocalizations.of(context)!.homepage),
       ),
       body: _buildContent(context),
     );
@@ -22,10 +23,10 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          const Text(
-            'Routes',
+          Text(
+            AppLocalizations.of(context)!.helloWorld,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.w600,
             ),
@@ -35,8 +36,8 @@ class HomePage extends StatelessWidget {
           ),
           CustomElevatedButton(
             onPressed: () => Navigator.pushNamed(context, Routes.firstPage),
-            child: const Text(
-              'First Page',
+            child: Text(
+              AppLocalizations.of(context)!.firstPage,
             ),
             color: Colors.blue,
           ),
@@ -45,8 +46,8 @@ class HomePage extends StatelessWidget {
           ),
           CustomElevatedButton(
             onPressed: () => Navigator.pushNamed(context, Routes.secondPage),
-            child: const Text(
-              'Second Page',
+            child: Text(
+              AppLocalizations.of(context)!.secondPage,
             ),
             color: Colors.red,
           ),
@@ -55,8 +56,8 @@ class HomePage extends StatelessWidget {
           ),
           CustomElevatedButton(
             onPressed: () => Navigator.pushNamed(context, Routes.thirdPage),
-            child: const Text(
-              'Third Page',
+            child: Text(
+              AppLocalizations.of(context)!.thirdPage,
             ),
             color: Colors.pink,
           ),
