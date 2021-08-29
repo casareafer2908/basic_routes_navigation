@@ -4,5 +4,6 @@
   "firstPage": "Primera Pagina",
   "secondPage": "Segunda Pagina",
   "thirdPage": "Tercera Pagina",
-  "timesPushedButton": "Has presionado el boton estas veces:"
+  "timesPushedButton": "Has presionado el boton estas veces:",
+  "incrementTooltip": "Sumar"
 }
