@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ThirdPage extends StatefulWidget {
   const ThirdPage({Key? key, required this.title}) : super(key: key);
@@ -38,8 +37,8 @@ class _ThirdPageState extends State<ThirdPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              AppLocalizations.of(context)!.timesPushedButton,
+            const Text(
+              "times pushed button",
             ),
             Text(
               '$_counter',
@@ -50,7 +49,7 @@ class _ThirdPageState extends State<ThirdPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: AppLocalizations.of(context)!.incrementTooltip,
+        tooltip: "increment",
         child: const Icon(Icons.add),
       ),
     );

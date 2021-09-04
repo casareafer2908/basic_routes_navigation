@@ -1,7 +1,6 @@
 import 'package:counter/src/navigation/routes.dart';
 import 'package:counter/src/ui/common_widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.homepage),
+        title: const Text("homepage"),
       ),
       body: _buildContent(context),
     );
@@ -23,10 +22,10 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(
-            AppLocalizations.of(context)!.helloWorld,
+          const Text(
+            "hello world",
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.w600,
             ),
@@ -37,8 +36,8 @@ class HomePage extends StatelessWidget {
           CustomElevatedButton(
             key: const ValueKey('firstPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.firstPage),
-            child: Text(
-              AppLocalizations.of(context)!.firstPage,
+            child: const Text(
+              "first page",
             ),
             color: Colors.blue,
           ),
@@ -48,8 +47,8 @@ class HomePage extends StatelessWidget {
           CustomElevatedButton(
             key: const ValueKey('secondPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.secondPage),
-            child: Text(
-              AppLocalizations.of(context)!.secondPage,
+            child: const Text(
+              "second page",
             ),
             color: Colors.red,
           ),
@@ -59,8 +58,8 @@ class HomePage extends StatelessWidget {
           CustomElevatedButton(
             key: const ValueKey('thirdPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.thirdPage),
-            child: Text(
-              AppLocalizations.of(context)!.thirdPage,
+            child: const Text(
+              "third page",
             ),
             color: Colors.pink,
           ),

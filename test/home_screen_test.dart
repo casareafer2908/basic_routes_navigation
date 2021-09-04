@@ -6,7 +6,7 @@ import 'package:counter/src/ui/third_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:counter/src/l10n/locales.dart';
+import 'package:counter/src/translations/locales.dart';
 
 class MockNavigatorObserver extends Mock implements NavigatorObserver {}
 
