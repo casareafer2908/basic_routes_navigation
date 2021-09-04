@@ -35,6 +35,7 @@ class HomePage extends StatelessWidget {
             height: 40,
           ),
           CustomElevatedButton(
+            key: const ValueKey('firstPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.firstPage),
             child: Text(
               AppLocalizations.of(context)!.firstPage,
@@ -45,6 +46,7 @@ class HomePage extends StatelessWidget {
             height: 8,
           ),
           CustomElevatedButton(
+            key: const ValueKey('secondPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.secondPage),
             child: Text(
               AppLocalizations.of(context)!.secondPage,
@@ -55,6 +57,7 @@ class HomePage extends StatelessWidget {
             height: 8,
           ),
           CustomElevatedButton(
+            key: const ValueKey('thirdPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.thirdPage),
             child: Text(
               AppLocalizations.of(context)!.thirdPage,
