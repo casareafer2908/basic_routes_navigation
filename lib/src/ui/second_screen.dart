@@ -28,6 +28,7 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
+          key: const ValueKey('back'),
           icon: const Icon(Icons.arrow_back),
           onPressed: _back,
         ),
