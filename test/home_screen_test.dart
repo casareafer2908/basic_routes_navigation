@@ -15,7 +15,6 @@ void main() {
       'Button First Page is present and triggers navigation after tapped',
       (WidgetTester tester) async {
     final mockObserver = MockNavigatorObserver();
-    Routes route;
     await tester.pumpWidget(
       MaterialApp(
         home: const HomePage(),
@@ -38,7 +37,6 @@ void main() {
       'Button Second Page is present and triggers navigation after tapped',
       (WidgetTester tester) async {
     final mockObserver = MockNavigatorObserver();
-    Routes route;
     await tester.pumpWidget(
       MaterialApp(
         home: const HomePage(),
@@ -61,7 +59,6 @@ void main() {
       'Button Third Page is present and triggers navigation after tapped',
       (WidgetTester tester) async {
     final mockObserver = MockNavigatorObserver();
-    Routes route;
     await tester.pumpWidget(
       MaterialApp(
         home: const HomePage(),
