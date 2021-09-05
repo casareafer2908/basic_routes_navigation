@@ -1,9 +1,8 @@
-import 'package:counter/src/ui/first_screen.dart';
-import 'package:counter/src/ui/home_screen.dart';
-import 'package:counter/src/ui/second_screen.dart';
-import 'package:counter/src/ui/third_screen.dart';
+import 'package:basic_routes_navigation/src/ui/first_screen.dart';
+import 'package:basic_routes_navigation/src/ui/home_screen.dart';
+import 'package:basic_routes_navigation/src/ui/second_screen.dart';
+import 'package:basic_routes_navigation/src/ui/third_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Routes {
   static const homePage = '/';
@@ -14,21 +13,18 @@ class Routes {
   static Route routes(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case homePage:
-        return MaterialPageRoute(builder: (context) => const HomePage());
+        return _buildRoute(HomePage.create);
       case firstPage:
-        return MaterialPageRoute(
-            builder: (context) =>
-                FirstPage(title: AppLocalizations.of(context)!.firstPage));
+        return _buildRoute(FirstPage.create);
       case secondPage:
-        return MaterialPageRoute(
-            builder: (context) =>
-                SecondPage(title: AppLocalizations.of(context)!.secondPage));
+        return _buildRoute(SecondPage.create);
       case thirdPage:
-        return MaterialPageRoute(
-            builder: (context) =>
-                ThirdPage(title: AppLocalizations.of(context)!.thirdPage));
+        return _buildRoute(ThirdPage.create);
       default:
         throw Exception('This screen doesn\'t exist');
     }
   }
+
+  static MaterialPageRoute<T> _buildRoute<T>(Function buildFun) =>
+      MaterialPageRoute<T>(builder: (context) => buildFun(context));
 }

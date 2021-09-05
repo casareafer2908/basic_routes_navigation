@@ -1,4 +1,4 @@
-import 'package:counter/src/ui/common_widgets/custom_elevated_button.dart';
+import 'package:basic_routes_navigation/src/ui/common_widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
