@@ -1,6 +1,6 @@
 import 'package:basic_routes_navigation/src/localization/locale_keys.g.dart';
-import 'package:basic_routes_navigation/src/navigation/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:basic_routes_navigation/src/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'common_widgets/custom_elevated_button.dart';
 
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("homepage"),
+        title: const Text(LocaleKeys.homepage).tr(),
       ),
       body: _buildContent(context),
     );
@@ -25,13 +25,13 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           const Text(
-            "hello world",
+            LocaleKeys.homepageRoutesLabel,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.w600,
             ),
-          ),
+          ).tr(),
           const SizedBox(
             height: 40,
           ),
@@ -48,8 +48,8 @@ class HomePage extends StatelessWidget {
             key: const ValueKey('secondPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.secondPage),
             child: const Text(
-              "second page",
-            ),
+              LocaleKeys.secondPage,
+            ).tr(),
             color: Colors.red,
           ),
           const SizedBox(
@@ -59,8 +59,8 @@ class HomePage extends StatelessWidget {
             key: const ValueKey('thirdPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.thirdPage),
             child: const Text(
-              "third page",
-            ),
+              LocaleKeys.thirdPage,
+            ).tr(),
             color: Colors.pink,
           ),
         ],

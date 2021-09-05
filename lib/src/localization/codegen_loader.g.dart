@@ -17,6 +17,7 @@ class CodegenLoader extends AssetLoader{
   static const Map<String,dynamic> en = {
   "homepage": "Homepage",
   "helloWorld": "Hello World!",
+  "homepageRoutesLabel": "Routes:",
   "firstPage": "First Page",
   "secondPage": "Second Page",
   "thirdPage": "Third Page",
@@ -26,6 +27,7 @@ class CodegenLoader extends AssetLoader{
 static const Map<String,dynamic> es = {
   "homepage": "Página Principal",
   "helloWorld": "Rutas",
+  "homepageRoutesLabel": "Rutas:",
   "firstPage": "Primera Pagina",
   "secondPage": "Segunda Pagina",
   "thirdPage": "Tercera Pagina",

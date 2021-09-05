@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:basic_routes_navigation/src/localization/locale_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SecondPage extends StatefulWidget {
-  const SecondPage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const SecondPage({Key? key}) : super(key: key);
 
   @override
   _SecondPageState createState() => _SecondPageState();
@@ -31,15 +31,15 @@ class _SecondPageState extends State<SecondPage> {
           icon: const Icon(Icons.arrow_back),
           onPressed: _back,
         ),
-        title: Text(widget.title),
+        title: const Text(LocaleKeys.secondPage).tr(),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              "times pushed button",
-            ),
+              LocaleKeys.timesPushedButton,
+            ).tr(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -49,7 +49,7 @@ class _SecondPageState extends State<SecondPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: "increment",
+        tooltip: LocaleKeys.incrementTooltip.tr(),
         child: const Icon(Icons.add),
       ),
     );

@@ -3,6 +3,7 @@
 abstract class  LocaleKeys {
   static const homepage = 'homepage';
   static const helloWorld = 'helloWorld';
+  static const homepageRoutesLabel = 'homepageRoutesLabel';
   static const firstPage = 'firstPage';
   static const secondPage = 'secondPage';
   static const thirdPage = 'thirdPage';

@@ -15,14 +15,11 @@ class Routes {
       case homePage:
         return MaterialPageRoute(builder: (context) => const HomePage());
       case firstPage:
-        return MaterialPageRoute(
-            builder: (context) => const FirstPage(title: 'first page'));
+        return MaterialPageRoute(builder: (context) => const FirstPage());
       case secondPage:
-        return MaterialPageRoute(
-            builder: (context) => const SecondPage(title: 'second page'));
+        return MaterialPageRoute(builder: (context) => const SecondPage());
       case thirdPage:
-        return MaterialPageRoute(
-            builder: (context) => const ThirdPage(title: 'third page'));
+        return MaterialPageRoute(builder: (context) => const ThirdPage());
       default:
         throw Exception('This screen doesn\'t exist');
     }
