@@ -1,16 +1,19 @@
-import 'package:counter/src/navigation/routes.dart';
-import 'package:counter/src/ui/common_widgets/custom_elevated_button.dart';
+import 'package:basic_routes_navigation/src/localization/locale_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:basic_routes_navigation/src/navigation/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'common_widgets/custom_elevated_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  static Widget create(BuildContext context) => HomePage();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.homepage),
+        title: const Text(LocaleKeys.homepage).tr(),
       ),
       body: _buildContent(context),
     );
@@ -23,23 +26,21 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(
-            AppLocalizations.of(context)!.helloWorld,
+          const Text(
+            LocaleKeys.homepageRoutesLabel,
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.w600,
             ),
-          ),
+          ).tr(),
           const SizedBox(
             height: 40,
           ),
           CustomElevatedButton(
             key: const ValueKey('firstPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.firstPage),
-            child: Text(
-              AppLocalizations.of(context)!.firstPage,
-            ),
+            child: const Text(LocaleKeys.firstPage).tr(),
             color: Colors.blue,
           ),
           const SizedBox(
@@ -48,9 +49,9 @@ class HomePage extends StatelessWidget {
           CustomElevatedButton(
             key: const ValueKey('secondPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.secondPage),
-            child: Text(
-              AppLocalizations.of(context)!.secondPage,
-            ),
+            child: const Text(
+              LocaleKeys.secondPage,
+            ).tr(),
             color: Colors.red,
           ),
           const SizedBox(
@@ -59,9 +60,9 @@ class HomePage extends StatelessWidget {
           CustomElevatedButton(
             key: const ValueKey('thirdPage'),
             onPressed: () => Navigator.pushNamed(context, Routes.thirdPage),
-            child: Text(
-              AppLocalizations.of(context)!.thirdPage,
-            ),
+            child: const Text(
+              LocaleKeys.thirdPage,
+            ).tr(),
             color: Colors.pink,
           ),
         ],

@@ -1,6 +1,7 @@
 {
   "homepage": "Página Principal",
   "helloWorld": "Rutas",
+  "homepageRoutesLabel": "Rutas:",
   "firstPage": "Primera Pagina",
   "secondPage": "Segunda Pagina",
   "thirdPage": "Tercera Pagina",

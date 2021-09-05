@@ -1,12 +1,11 @@
-import 'package:counter/src/navigation/routes.dart';
-import 'package:counter/src/ui/first_screen.dart';
-import 'package:counter/src/ui/home_screen.dart';
-import 'package:counter/src/ui/second_screen.dart';
-import 'package:counter/src/ui/third_screen.dart';
+import 'package:basic_routes_navigation/src/navigation/routes.dart';
+import 'package:basic_routes_navigation/src/ui/first_screen.dart';
+import 'package:basic_routes_navigation/src/ui/home_screen.dart';
+import 'package:basic_routes_navigation/src/ui/second_screen.dart';
+import 'package:basic_routes_navigation/src/ui/third_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:counter/src/l10n/locales.dart';
 
 class MockNavigatorObserver extends Mock implements NavigatorObserver {}
 
@@ -18,8 +17,6 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: const HomePage(),
-        localizationsDelegates: localizationsDelegates,
-        supportedLocales: supportedLocales,
         navigatorObservers: [mockObserver],
         onGenerateRoute: (settings) => Routes.routes(settings),
       ),
@@ -40,8 +37,6 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: const HomePage(),
-        localizationsDelegates: localizationsDelegates,
-        supportedLocales: supportedLocales,
         navigatorObservers: [mockObserver],
         onGenerateRoute: (settings) => Routes.routes(settings),
       ),
@@ -62,8 +57,6 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: const HomePage(),
-        localizationsDelegates: localizationsDelegates,
-        supportedLocales: supportedLocales,
         navigatorObservers: [mockObserver],
         onGenerateRoute: (settings) => Routes.routes(settings),
       ),
