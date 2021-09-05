@@ -5,6 +5,8 @@ import 'package:easy_localization/easy_localization.dart';
 class FirstPage extends StatefulWidget {
   const FirstPage({Key? key}) : super(key: key);
 
+  static Widget create(BuildContext context) => FirstPage();
+
   @override
   _FirstPageState createState() => _FirstPageState();
 }

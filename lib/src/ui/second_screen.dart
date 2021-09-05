@@ -5,6 +5,8 @@ import 'package:easy_localization/easy_localization.dart';
 class SecondPage extends StatefulWidget {
   const SecondPage({Key? key}) : super(key: key);
 
+  static Widget create(BuildContext context) => SecondPage();
+
   @override
   _SecondPageState createState() => _SecondPageState();
 }

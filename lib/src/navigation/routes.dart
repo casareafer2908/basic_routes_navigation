@@ -13,15 +13,18 @@ class Routes {
   static Route routes(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case homePage:
-        return MaterialPageRoute(builder: (context) => const HomePage());
+        return _buildRoute(HomePage.create);
       case firstPage:
-        return MaterialPageRoute(builder: (context) => const FirstPage());
+        return _buildRoute(FirstPage.create);
       case secondPage:
-        return MaterialPageRoute(builder: (context) => const SecondPage());
+        return _buildRoute(SecondPage.create);
       case thirdPage:
-        return MaterialPageRoute(builder: (context) => const ThirdPage());
+        return _buildRoute(ThirdPage.create);
       default:
         throw Exception('This screen doesn\'t exist');
     }
   }
+
+  static MaterialPageRoute<T> _buildRoute<T>(Function buildFun) =>
+      MaterialPageRoute<T>(builder: (context) => buildFun(context));
 }

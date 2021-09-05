@@ -5,6 +5,8 @@ import 'package:easy_localization/easy_localization.dart';
 class ThirdPage extends StatefulWidget {
   const ThirdPage({Key? key}) : super(key: key);
 
+  static Widget create(BuildContext context) => ThirdPage();
+
   @override
   _ThirdPageState createState() => _ThirdPageState();
 }
